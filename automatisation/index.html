@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>Test automatisation</h1>
+
+        <input id="login" type="login" placeholder="login" />
+        <input id="password" type="password" placeholder="password" />
+
+        <button id="submit" onclick="checkLogin()">Submit</button>
+
+        <input type="file" id="file" />
+
+        <div id="result"></div>
+
+        <!-- Image contenu dans le fichier -->
+        <img id="image" src="" />
+    </body>
+</html>
+
+<script>
+    function checkLogin() {
+        var login = document.getElementById("login").value;
+        var password = document.getElementById("password").value;
+
+        if (login == "aze" && password == "qsd") {
+            document.getElementById("file").style.display = "block";
+            document.getElementById("result").style.display = "none";
+
+            document.getElementById("file").addEventListener(
+                "change",
+                function () {
+                    var file = document.getElementById("file").files[0];
+                    var reader = new FileReader();
+
+                    reader.addEventListener(
+                        "load",
+                        function () {
+                            document.getElementById("image").src =
+                                reader.result;
+                        },
+                        false
+                    );
+
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
+                },
+                false
+            );
+        } else {
+            document.getElementById("result").innerHTML =
+                "Le login ou le mot de passe est incorrect";
+        }
+    }
+</script>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    #file {
+        display: none;
+    }
+</style>
