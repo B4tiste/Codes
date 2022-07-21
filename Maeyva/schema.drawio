@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="VfhQBn7Z54zDq6VSI6XN" name="Page-1">
+        <mxGraphModel dx="395" dy="1644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Initialisation&lt;br&gt;setup()" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-1020" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Ouverture Liaison série" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-920" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="A0 = Entrée&lt;br&gt;pinmode(A0, input)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-830" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Laser = Sortie&lt;br&gt;pinmode(A0, input)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-750" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="180" y="-780" as="sourcePoint"/>
+                        <mxPoint x="230" y="-830" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Pompe n°1:&lt;br&gt;vitesseMax = 1500&lt;br&gt;Acceleration = 1500" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-670" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Pompe n°2:&lt;br&gt;vitesseMax = 1500&lt;br&gt;Acceleration = 1500" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-590" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Variables globales :&lt;br&gt;float TensionLue&lt;br&gt;float volume_initial = 0&lt;br&gt;float volume_injecte = 0&lt;br&gt;int Laser = 3&lt;br&gt;String ChaineSaisie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="-1150" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;" edge="1" parent="1" source="11" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Boucle&lt;br&gt;loop()" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="383" y="-790" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Serial.available() ?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="378" y="-690" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="503" y="-655" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Lecture de la saisie&lt;br&gt;ChaineSaisie = Serial.readString();" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="-590" width="206" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="ChaineSaisie == &quot;go&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="-490" width="156" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="218" y="-455" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="ChaineSaisie == &quot;go&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="-490" width="156" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="846" y="-455" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="ChaineSaisie == &quot;go&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="-490" width="156" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="636" y="-455" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="ChaineSaisie == &quot;go&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="-490" width="156" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="426" y="-455" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Remplissage du becher" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="88" y="-380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Remplissage du chien" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="88" y="-310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Activation du Laser" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="88" y="-240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Lecture de la tension sur le catpeur A0&lt;br&gt;Tensionlue = analogRead(A0) * 5.0 / 1023" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="32" y="-170" width="232" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Affichage de la tenstion lue" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+                    <mxGeometry x="88" y="-100" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

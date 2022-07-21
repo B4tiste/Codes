@@ -40,7 +40,7 @@ res = False
 for i in range(4):
     for j in range(4):
         case_btn = Button(parent=scene, text=schema[::-1][j][i], scale=0.8, position=(i, j))
-        
+
         def on_click(b=case_btn):
             global clicked, value
 
