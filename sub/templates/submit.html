@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Submit</title>
+    </head>
+    <body>
+        <h1>Submit</h1>
+
+        <a href="{{ url_for('home_page') }}">Home</a>
+
+        <h3>Video id : {{ ID }}</h3>
+
+        <h3>Video link : <a href="{{ VOD_TWITCH_LINK }}" target="_blank">{{ VOD_TWITCH_LINK }}</a></h3>
+
+        <h2>Video Player</h2>
+
+        <!-- Link : https://dgeft87wbj63p.cloudfront.net/51a7c7ef1fe5cb3deb8a_jirayalecochon_45787254044_1658332920/chunked/index-dvr.m3u8 -->
+        <!-- Create a video player to play this .m3u8 stream -->
+        <video width="600" height="400" controls>
+            <source src="{{ VOD_STREAM }}" type="application/x-mpegURL">
+        </video>
+
+        <!-- Make a video player for a .ts file -->
+        <video width="600" height="400" controls>
+            <source src="../tests/0.ts" type="video/mp2t">
+        </video>
+    </body>
+</html>
